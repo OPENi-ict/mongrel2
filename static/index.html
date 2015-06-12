@@ -108,37 +108,44 @@
         <p>Open-Source, Web-Based, Framework for Integrating Applications with Cloud-based Services and Personal Cloudlets.</p>
         <hr>
         <h2 id="what-is-openi-">What is OPENi?</h2>
-        <p>To <strong>developers</strong> OPENi is a fantastic service that simplifies the creation of mobile application by managing the applications interaction with a multitude of cloud based services through the Graph API.</p>
-        <p>To <strong>end users</strong> OPENi is a cloud based service that securely stores their personal data. Furthermore it&#39;s privacy control mechanisms gives them full control over how and with whome they data is shared.   </p>
+        <p> The OPENi core platform maximises user control by providing an OAuth compliant secure fine-grained access control mechanism, through which, users can control access to their personal data within their Personal Cloudlet and other Cloud-based services. Additionally, OPENi aims to increase the end-user's awareness of how their data is accessed through its innovative user-dashboards. OPENi also simplifies integration with 3rd party cloud based services through its API aggregator, its client side library, and service enablers; all of which allow for rapid application development.</p>
+        <h3 id="personal-data">Personal Data</h3>
+        <p>OPENi stores user data in Personal Cloudlets. The Cloudlet is built up from a user interataction with OPENi enabled apps. It is an easy to use free storage facility that affords them full control over the storage and sharing of their personal data.</p>
+        <h3 id="api-s">Graph API&#39;s</h3>
+        <p>APIs are what connect us, but they can be difficult to manage. In OPENi we abstract this inherent volitility in dealing with cloud based services by providing our own simple community managed Graph API, this greatly increases the power and reach of OPENi enabled applications.</p>
+        <h3 id="trust">Trust</h3>
+        <p>OPENi aims to inspire innovation in the European mobile applications industry, by radically improving the trust in personal cloud storage through the development of a consumer-centric, open source mobile cloud applications platform.</p>
+        <h3 id="mobile-client-libraries">Mobile Client Libraries</h3>
+        <p>In line with OPENi's ethos of openness and collabortation we have included a number of client libraries which greatly reduce the development overhead of OPENi enabled applications.</p>
         <hr>
-        <h2 id="what-is-the-graph-api-">What is the Graph API?</h2>
-        <p>Graph API is the main interface of interaction with OPENi. After you have got the token from OPENi authentication, you can use the Graph API methods to access resources from OPENi Cloudlets. By following the basic rules of the Graph API, you can call resources coming from the user Cloudlet, the user Cloud Based Services (e.g. Facebook, Foursquare, Twitter etc.) or combine results from both directions. The documentation of the Graph API is available here (<a href="/api-docs/?api_framework=true">/api-docs/?api_framework=true</a>) and the description of how the Graph API is structured is here (<a href="/tutorials/graph_api_template.html">/tutorials/graph_api_template.html</a>).</p>
-        <h2 id="what-is-a-personal-cloudlet-">What is a Personal Cloudlet?</h2>
-        <p>A personal Cloudlet is the end-users personal data stored on the OPENi platform. The Cloudlet is built up from the user interataction with OPENi enabled apps. From an end users perspective it is an easy to use free storage facility that affords them full control over the storage and sharing of their personal data. From the app developers perspective it is 1) a rich source of data that they can utilise to enhance their applications, 2) a mechanisms to simplify the process of sharing, and 3) a third party service to which they can outsource the physical, legal, and ethical management of their mobile app&#39;s data. </p>
-        <h2 id="security-considerations-">Security considerations.</h2>
-        <p>The OPENi security and privacy framework provides the resource platforms with a unified security, privacy and identity concept. It enables user-centric management to late-bound and dynamic data and APIs, while providing the developer with the ability to access the data in a privacy concerning manner. At its corte the security platform focusses on fine grain access control and single sign on capabilities. It provides the end-user maximum control of their data by enabling centric  permission management before and after the initial installation of a client. Additionally it  can serve as an identity provider to external applications and services and provides the infrastructure security for the platform as a whole. </p>
+
+
+        <h2 id="gettingstarted">Getting started: Building an OPENi enabled app</h2>
+        <p>To start building OPENi enabled Apps follow the tutorials bellow; but first you need to read the Dashboard and Client Libraries subsection as you know a little about the Core Platforms user and developer facing GUIs.
+            If you are really impatient you can download the sample app provided and start tinkering with the code.</p>
+
+        <h3 id="dashboards">Dashboards</h3>
+        <p>The OPENi core platform comes with a number of Dashboards both for the end user and the developer which simplify their interaction with the Core Platform.</p>
+        <ul>
+            <li><a href="/user">User Dashboard</a>: The User Dashboard allows the end user to view the data on their Cloudlets, adjust their permissions settings, and view analytics on how often their data was accessed.</li>
+            <li><a href="/admin">Admin Dashboard</a>: The Admin Dashboard allows Developers to create App and Service Enabler Clients
+                on the platform; it also allows them to associate permissions with their clients (Permissions later used to ask when end users
+                are granting acess to their data/Cloudlet). The Admin dashboard also also allows the app developer to create cusotm types, setup
+                subscriptions, view data, and run aggregator queries.</li>
+            <li><a href="/api-builder/web/">API Builder Dashboard</a>: The API builder enables the developer community to enhance and expand the
+                Graph API.</li>
+        </ul>
         <hr>
-        <h2 id="client-libraries">Client Libraries</h2>
-        <p>To experiment with OPENi&#39;s Graph API, security, and cloudlet frameworks you can use the <a href="/api-docs/">REST Endpoints HTML UI</a>. For Android application development we provide a <a href="/android-sdk/openi-client-lib.aar">mobile client library</a>. This library abstracts and simplify access to the OPENi services, in simple terms it aggregates the REST clients of the three frameworks, but it also adds a significant number of enhancements including a number of security mechanisms and UI components. </p>
-        <p>We also provide standalone Java/Android client libraries for the individual frameworks:</p>
+        <h3 id="client-libraries">Client Libraries</h3>
+        <p>To allow application development we provide two mobile client libraries that simplifies access to the OPENi Core Platform Features. </p>
         <ul>
             <li><a href="/android-sdk/openi-client-lib.aar" download>Android client library</a></li>
-        </ul>
-        <ul>
-            <li><a href="/android-sdk/openi-auth-android-sdk-1.0.0.jar">Security framework Java client library</a></li>
-            <li><a href="/api-docs/">ALL REST Endpoints HTML UI</a></li>
-            <li><a href="/api-docs/?api_framework=true">Graph API REST Endpoints HTML UI</a></li>
-            <li><a href="/api-docs/?cloudlet=true">Cloudlet REST Endpoints HTML UI</a></li>
-            <li><a href="/api-docs/?auth=true">Security API REST Endpoints HTML UI</a></li>
+            <li><a href="https://github.com/OPENi-ict/openi-js-lib">JavaScript client library</a></li>
         </ul>
         <hr>
-        <h2 id="useful-tools">Useful Tools</h2>
-        <p>To ease development download and install this JSON Formatter <a href="https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en">chrome plugin</a>.</p>
-        <p>Alternatively you can use our own <a href="/viewJson/index.html">JSON-LD Viewer</a>.</p>
-        <hr>
-        <h2 id="tutorials">Tutorials</h2>
+        <h3 id="tutorials">Tutorials</h3>
         <ul>
-            <li><a href="/tutorials/logIn.html">Login Security</a></li>
+            <!--li><a href="/tutorials/logIn.html">Login Security</a></li>
             <li><a href="/tutorials/getCloudlets.html">Get Cloudlets/Post Objects</a></li>
             <li><a href="/tutorials/openi_types.html">Creating OPENi Types</a></li>
             <li><a href="/tutorials/REST_calls_to_the_OPENi_Graph_API.html">REST calls to the OPENi Graph API</a></li>
@@ -147,33 +154,38 @@
             <li><a href="/tutorials/notifications_and_subscriptions.html">Notifications and Subscriptions</a></li>
             <li><a href="/tutorials/Android_Client_Tutorial.html">OPENi Android Client</a></li>
             <li><a href="/tutorials/graph_api_template.html">Graph API Template</a></li>
-            <li><a href="/tutorials/permissions.html">OPENi Permissions</a></li>
+            <li><a href="/tutorials/permissions.html">OPENi Permissions</a></li-->
+            <li><a href="https://github.com/OPENi-ict/api-framework/wiki/End-to-End-Example-Tutorial">End to End Example</a>: Example how to create an application from end-to-end </li>
+            <li><a href="https://github.com/OPENi-ict/api-framework/wiki/Documentation-and-demo-for-creating-and-adding-CBS">API Builder Dashboard</a>: How to create and add CBS to the Graph API</li>
+            <li><a href="https://github.com/OPENi-ict/documentation/wiki/OPENi-Android-Tutorial">Android Tutorial</a>: Tutorial that describes how to create a client on the admin dashboard,
+                create a custom openi type, set permissions for an app, and add the OPENi SDK to an Android SDK. It also includes sample Android code.</li>
+            <li><a href="https://github.com/OPENi-ict/documentation/wiki/Permission-Builder">Permission Builder Tutorial</a>: Tutorial that explains
+                how to use the Permissions builder on the Admin Dashboard.</li>
         </ul>
         <hr>
-        <h2 id="apps">Demo Apps</h2>
+        <h3 id="apps">Demo App</h3>
+        <p>For inspiration we've provided the following demo application which goes through some simple interactions with a user's Cloudlet.
+            It simply creates, reads, updates, and deletes a number of objects; the data is contrived as the purpose of the app is to demonstrate how
+            the SDK works and to showcase the user & admin dashboards.
+            The application is build with the OPENi Android SDK and requires <a href="https://developer.android.com/sdk/index.html">Android Studio</a>. </p>
         <ul>
-            <li><a href="/android-sdk/OPENi_camera_app.zip" download>Android Demo App Source Code (Android Studio)</a></li>
             <li><a href="/android-sdk/OPENiAndroidCRUD.zip" download>Android CRUD Demo App Source Code (Android Studio)</a></li>
         </ul>
+        <h3 id="demo-applications">OPENi REST Endpoints</h3>
+        <p>The following link REST Endpoints are meant to assist development, warning they are meant for advanced users of the
+            system and are meant to be used in a particular order. They may not make much sense or may throw errors when used out of that order.</p>
+        <ul>
+            <li><a href="/api-docs/">Core Platform REST Endpoints HTML UI</a></li>
+        </ul>
+        </p>
         <hr>
-
-
-        <h2 id="architecture">Architecture</h2>
-        <p><img width="400" align="center" src="tutorials/High Level Architecture - New split.png" alt="alt text" title="OPENi Architecture Diagram"></p>
-        <p>At a high level the OPENi Platform is composed of four major components: 1) the mobile client library, 2) the security framework, 3) the API framework, and 4) the Cloudlet framework. Each component is developed using a different language and a different application stack as is suited to its functionality, yet all are presented to mobile developers through a single suite unified REST Endpoints. Internally the individual frameworks also interact with each other through their respective REST endpoints and SDK&#39;s. All interaction with external cloud-based services is performed by the API framework through it&#39;s Cloud-based services (CBS) connectors.</p>
-        <hr>
-        <h2 id="contributing">Contributing</h2>
-        <p>If you wish to contribute to the OPENi project or you just want a look at the code you can do so by cloning our <a href="vagrantup.com">Vagrant</a> development environment and following the instructions on the the README file.</p>
-<pre><code class="lang-sh">git clone https://github.com/OPENi-ict/openi-dev-env
-</code></pre>
-
 
     </div>
 
 </div>
 <footer id="colophon" role="contentinfo">
     <div class="site-info"  style="width: 700px;">
-        <p>Copyright © OPENi 2013 </p>
+        <p>Copyright © OPENi 2015 </p>
     </div>
 </footer>
 
